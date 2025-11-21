@@ -4,7 +4,7 @@
 
 > **Author's Note**: Built by Yugesh during his time optimizing e-commerce operations. This tool represents real-world problem-solving in international marketplace integrations, reducing hours of manual work to minutes through AI automation.
 
-## 🎯 Overview
+##  Overview
 
 An intelligent color mapping system that automatically maps product color descriptions across 6+ languages to standardized marketplace codes using computer vision and natural language processing.
 
@@ -18,14 +18,14 @@ Yet all need to map to the same standardized code: `NAVY_BLUE`
 
 **The Solution**: This tool uses OpenAI's CLIP vision-language model to understand colors both from text descriptions AND product images, achieving 85-90% accuracy while saving 95% of manual mapping time.
 
-## ✨ Key Features
+##  Key Features
 
-- **🌍 Multilingual Detection**: Automatically recognizes colors in English, French, German, Italian, Polish, and Spanish
-- **👁️ Vision Verification**: Uses CLIP to verify colors from actual product images
-- **🎯 Smart Matching**: Dynamic color family detection with multi-pass validation
-- **⚡ High Performance**: Processes 100 items in ~5 minutes on GPU
-- **📊 Confidence Scoring**: Know which mappings need human review
-- **🔄 Async Processing**: Concurrent image downloads for maximum speed
+- ** Multilingual Detection**: Automatically recognizes colors in English, French, German, Italian, Polish, and Spanish
+- ** Vision Verification**: Uses CLIP to verify colors from actual product images
+- ** Smart Matching**: Dynamic color family detection with multi-pass validation
+- ** High Performance**: Processes 100 items in ~5 minutes on GPU
+- ** Confidence Scoring**: Know which mappings need human review
+- ** Async Processing**: Concurrent image downloads for maximum speed
 
 ## 📋 Real-World Results
 
@@ -47,7 +47,7 @@ This tool has been tested in production e-commerce operations:
 
 *"This tool transformed our international product onboarding process. What used to take our team a full day now takes less than half an hour."* — Operations Lead
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -79,7 +79,7 @@ python color_mapper.py
 
 See [QUICKSTART.md](QUICKSTART.md) for detailed setup instructions.
 
-## 📊 How It Works
+##  How It Works
 
 ```
 Product Color Input
@@ -126,7 +126,7 @@ CLIP Suggestions: Navy Blue
 CLIP Confidence: 0.89
 ```
 
-## 🌍 Supported Languages
+##  Supported Languages
 
 The system recognizes color families in multiple languages:
 
@@ -139,7 +139,7 @@ The system recognizes color families in multiple languages:
 | Polish | czerwony, granatowy, leśna zieleń, bordowy |
 | Spanish | rojo, azul marino, verde bosque, burdeos |
 
-## 🎨 Color Families Recognized
+##  Color Families Recognized
 
 - **Red Family**: crimson, scarlet, maroon, burgundy, cherry
 - **Blue Family**: navy, azure, cobalt, royal, sky
@@ -150,7 +150,7 @@ The system recognizes color families in multiple languages:
 - **Neutral**: black, white, gray, brown
 - **Orange Family**: peach, tangerine, apricot, coral
 
-## ⚙️ Configuration
+##  Configuration
 
 Key parameters in `color_mapper.py`:
 
@@ -170,7 +170,7 @@ keep_top = 64  # Max colors in family subset
 min_size = 6   # Min family subset size
 ```
 
-## 📈 Performance & Accuracy
+##  Performance & Accuracy
 
 ### Processing Speed
 - **With GPU (T4)**: ~100 items in 5 minutes
@@ -191,7 +191,7 @@ Typical production run:
 - Medium Confidence (0.60-0.79): 15-20% ⚠️ Quick review
 - Low Confidence (<0.60): 5-10% ❌ Manual mapping
 
-## 🔧 Advanced Usage
+##  Advanced Usage
 
 ### Custom Color Families
 
@@ -224,7 +224,7 @@ print(f"Review needed: {len(low_conf)} items")
 low_conf.to_excel('review_queue.xlsx')
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -257,7 +257,7 @@ async with session.get(url, timeout=60) as response:
 # System auto-retries with stronger prompts
 ```
 
-## 📚 Documentation
+##  Documentation
 
 - [QUICKSTART.md](QUICKSTART.md) - Get running in 15 minutes
 - [INTERNAL_GUIDE.md](INTERNAL_GUIDE.md) - Team deployment guide
